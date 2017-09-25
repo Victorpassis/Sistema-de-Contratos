@@ -1,0 +1,28 @@
+{
+   "title": "Sistema de Contratos",
+   "name": "sistema-de-contratos",
+   "version": "1.0.0",
+   "description": "Sistema para gerenciamento de Clientes e Contratos",
+   "main": "Gulpfile.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "author": "Victor Pereira de Assis",
+   "license": "MIT",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/Victorpassis/Sistema-de-Contratos"
+   },
+   "dependencies": {
+      "bootstrap": "^4.0.0-beta",
+      "datatables.net-bs4": "1.10.15",
+      "font-awesome": "4.7.0",
+      "jquery": "3.2.1",
+      "jquery-mask-plugin": "1.14.11",
+      "multiselect": "0.9.12",
+   },
+   "devDependencies": {
+      "gulp": "^3.9.1",
+      "gulp-sass": "^3.1.0"
+   }
+}
