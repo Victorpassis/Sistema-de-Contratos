@@ -1,6 +1,4 @@
 # Sistema de Contratos
-========
-
 Esse Sistema tem como objetivo, administrar clientes, produtos e contratos:
 
 ## Funcionalidades
