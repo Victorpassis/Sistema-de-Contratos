@@ -29,7 +29,7 @@
                   <th>Data Termino</th>
                   <th>Número de Parcelas</th>
                   <th>Vencimento dos Boletos</th>
-                  <th>Editar</th>
+                  <!--<th>Editar</th>-->
                   <th>Excluir</th>
                </tr>
             </thead>
@@ -43,17 +43,19 @@
                   <th>Data Termino</th>
                   <th>Número de Parcelas</th>
                   <th>Vencimento dos Boletos</th>
-                  <th>Editar</th>
+                  <!--<th>Editar</th>-->
                   <th>Excluir</th>
                </tr>
             </tfoot>
             <tbody>
-               <?php while($inscricao = $rows->fetch(PDO::FETCH_OBJ)): print_r($inscricao); ?>
+               <?php while($inscricao = $rows->fetch(PDO::FETCH_OBJ)): $produtos = explode(",", $inscricao->produtos); ?>
                   <tr>
-                     <td><?php echo $inscricao->idContrato ?> <?php echo $inscricao->nomeCliente ?></td>
+                     <td><?php echo $inscricao->nomeCliente ?></td>
                      <td>
                         <ul>
-                           <li><?php echo $inscricao->nomeProduto ?></li>
+                           <?php foreach ( $produtos as $produto ): ?>
+         							<li><?php echo $produto ?></li>
+         						<?php endforeach ?>
                         </ul>
                      </td>
                      <td><?php echo $inscricao->valor ?></td>
@@ -62,8 +64,8 @@
                      <td><?php echo $inscricao->data_fim ?></td>
                      <td><?php echo $inscricao->num_parcelas ?></td>
                      <td><?php echo $inscricao->dataVencimento ?></td>
-                     <td><a class="btn btn-outline-infobtn btn-outline-info" href="index.php?option=editar-cliente&id=<?php echo $inscricao->idContrato ?>" title="Editar">Editar</a></td>
-                     <td><a class="btn btn-outline-danger nav-link excluir" href="view/php/novo-cliente.php" data-fucao="id=<?php echo $inscricao->idContrato ?>&function=excluirCliente" title="Excluir">Excluir</a></td>
+                     <!--<td><a class="btn btn-outline-infobtn btn-outline-info" href="index.php?option=editar-contrato&id=<?php echo $inscricao->idContrato ?>" title="Editar">Editar</a></td>-->
+                     <td><a class="btn btn-outline-danger nav-link excluir" href="view/php/novo-contrato.php" data-fucao="id=<?php echo $inscricao->idContrato ?>&function=excluirContrato" title="Excluir">Excluir</a></td>
                   </tr>
                <?php endwhile; ?>
             </tbody>

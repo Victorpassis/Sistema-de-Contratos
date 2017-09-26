@@ -19,26 +19,27 @@ class ContratoCtrl {
 
       return $contratoDao->cadastrar($contrato);
    }
-   function editarContrato($nome, $dado, $cidade, $cep, $estado, $endereco, $numero, $bairro, $idCliente) {
+   /*function editarContrato($listaProdutos, $valorExtenco, $valor, $dataAtual, $dataInicio, $dataFinal, $numParcelas, $dataVencimento, $cliente, $idContrato) {
       $contratoDao = new ContratoDAO();
-      $cliente = new Contrato();
+      $contrato = new Contrato();
 
-      $cliente->setNome($nome);
-      $cliente->setDado($dado);
-      $cliente->setCidade($cidade);
-      $cliente->setCep($cep);
-      $cliente->setEstado($estado);
-      $cliente->setEndereco($endereco);
-      $cliente->setNumero($numero);
-      $cliente->setBairro($bairro);
+      $contrato->setListaProdutos($listaProdutos);
+      $contrato->setValorExtenco($valorExtenco);
+      $contrato->setValor($valor);
+      $contrato->setDataAtual($dataAtual);
+      $contrato->setDataInicio($dataInicio);
+      $contrato->setDataFinal($dataFinal);
+      $contrato->setNumParcelas($numParcelas);
+      $contrato->setDataVencimento($dataVencimento);
+      $contrato->setCliente($cliente);
 
-      return $clienteDao->editar($cliente, $idCliente);
+      return $contratoDao->editar($contrato, $idContrato);
 
-   }
-   function excluirContrato($idCliente) {
+   }*/
+   function excluirContrato($idContrato) {
       $contratoDao = new ContratoDAO();
 
-      return $clienteDao->excluir($idCliente);
+      return $contratoDao->excluir($idContrato);
    }
    function listarContrato() {
       $idContrato = func_get_args();

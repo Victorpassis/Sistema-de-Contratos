@@ -24,9 +24,9 @@ $_SERVER["REQUEST_METHOD"] == "POST";
          case 'cadastrarContrato':
             echo $contratoCtrl->cadastraContrato($listaProdutos, $valor, $valorExtenco, $dataAtual, $dataInicio, $dataFinal, $numParcelas, $dataVencimento, $cliente);
             break;
-         case 'editarContrato':
-            echo $contratoCtrl->editarContrato($nome, $valor, $descricao, $_POST["idProduto"]);
-            break;
+         /*case 'editarContrato':
+            echo $contratoCtrl->editarContrato($listaProdutos, $valor, $valorExtenco, $dataAtual, $dataInicio, $dataFinal, $numParcelas, $dataVencimento, $cliente, $_POST["idContrato"]);
+            break;*/
          case 'excluirContrato':
             echo $contratoCtrl->excluirContrato($_POST["id"]);
             break;
