@@ -3,7 +3,7 @@ require_once __DIR__ . "/DAO/ContratoDAO.php";
 require_once __DIR__ . "/../model/Contrato.php";
 
 class ContratoCtrl {
-   function cadastraContrato($listaProdutos, $valorExtenco, $valor, $dataAtual, $dataInicio, $dataFinal, $numParcelas, $dataVencimento, $cliente) {
+   function cadastraContrato($listaProdutos, $valor, $valorExtenco, $dataAtual, $dataInicio, $dataFinal, $numParcelas, $dataVencimento, $cliente) {
       $contratoDao = new ContratoDAO();
       $contrato = new Contrato();
 

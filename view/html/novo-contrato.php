@@ -132,7 +132,7 @@
       </button>
    </div>
    <div class="col-md-12">
-      <button class="btn btn-primary btn-cadastro" type="submit">Cadastrar Cliente</button>
+      <button class="btn btn-primary btn-cadastro" type="submit">Salvar Contrato</button>
       <i class="fa fa-spinner fa-pulse fa-2x fa-fw icon-load"></i>
       <span class="sr-only">Loading...</span>
    </div>

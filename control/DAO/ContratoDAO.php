@@ -35,14 +35,13 @@ class ContratoDAO {
                if($cadastro->rowCount() > 0) {
 
                } else {
-                  print_r($cadastro->errorInfo());
+                  $validade = array('alert' => 'alert-danger', 'msg' => $cadastro->errorInfo());
                }
             }
 
-            $validade = array('alert' => 'alert-success', 'msg' => 'Cliente Cadastrado com Sucesso!');
+            $validade = array('alert' => 'alert-success', 'msg' => 'Contrato Cadastrado com Sucesso!');
          } else {
-            $validade = array('alert' => 'alert-danger', 'msg' => 'Cliente não pode ser Cadastrado!');
-            //print_r($cadastro->errorInfo());
+            $validade = array('alert' => 'alert-danger', 'msg' => $cadastro->errorInfo());
          }
 
          return json_encode($validade);
