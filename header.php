@@ -70,7 +70,7 @@
             </li>
          </ul>
          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
+            <!--<li class="nav-item">
                <form class="form-inline my-2 my-lg-0 mr-lg-2">
                   <div class="input-group">
                      <input type="text" class="form-control" placeholder="Search for...">
@@ -81,10 +81,10 @@
                      </span>
                   </div>
                </form>
-            </li>
+            </li>-->
             <li class="nav-item">
                <a class="nav-link" data-toggle="modal" data-target="#exampleModal" title="Sair">
-               <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+               <i class="fa fa-fw fa-sign-out"></i>Sair</a>
             </li>
          </ul>
       </div>

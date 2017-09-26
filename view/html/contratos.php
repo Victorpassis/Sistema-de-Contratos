@@ -48,7 +48,7 @@
                </tr>
             </tfoot>
             <tbody>
-               <?php while($inscricao = $rows->fetch(PDO::FETCH_OBJ)): //print_r($inscricao); ?>
+               <?php while($inscricao = $rows->fetch(PDO::FETCH_OBJ)): print_r($inscricao); ?>
                   <tr>
                      <td><?php echo $inscricao->idContrato ?> <?php echo $inscricao->nomeCliente ?></td>
                      <td>
