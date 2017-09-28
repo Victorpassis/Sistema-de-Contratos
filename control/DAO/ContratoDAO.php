@@ -76,9 +76,15 @@ class ContratoDAO {
                   WHERE lp.idProduto = pr.idProduto AND
                   co.idContrato = lp.idContrato AND
                   co.idCliente = cl.idCliente
-                  ) AS produtos FROM contratos AS co
+               ) AS produtos, (
+                  SELECT GROUP_CONCAT(pr.descricao SEPARATOR ',')
+                  FROM produtos pr, listaprodutos lp
+                  WHERE lp.idProduto = pr.idProduto AND
+                  co.idContrato = lp.idContrato AND
+                  co.idCliente = cl.idCliente
+               ) AS descricao FROM contratos AS co
                INNER JOIN clientes cl ON co.idCliente = cl.idCliente
-               WHERE idContrato = ?"
+               WHERE co.idContrato = ?"
             );
             $cadastro->bindValue(1,$id);
          }

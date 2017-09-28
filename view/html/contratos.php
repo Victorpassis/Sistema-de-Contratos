@@ -29,7 +29,7 @@
                   <th>Data Termino</th>
                   <th>Número de Parcelas</th>
                   <th>Vencimento dos Boletos</th>
-                  <!--<th>Editar</th>-->
+                  <th>Contrato</th>
                   <th>Excluir</th>
                </tr>
             </thead>
@@ -43,7 +43,7 @@
                   <th>Data Termino</th>
                   <th>Número de Parcelas</th>
                   <th>Vencimento dos Boletos</th>
-                  <!--<th>Editar</th>-->
+                  <th>Contrato</th>
                   <th>Excluir</th>
                </tr>
             </tfoot>
@@ -64,7 +64,7 @@
                      <td><?php echo $inscricao->data_fim ?></td>
                      <td><?php echo $inscricao->num_parcelas ?></td>
                      <td><?php echo $inscricao->dataVencimento ?></td>
-                     <!--<td><a class="btn btn-outline-infobtn btn-outline-info" href="index.php?option=editar-contrato&id=<?php echo $inscricao->idContrato ?>" title="Editar">Editar</a></td>-->
+                     <td><a class="btn btn-outline-infobtn btn-outline-warning" href="index.php?option=contrato-pdf&id=<?php echo $inscricao->idContrato ?>" title="Contrato">Contrato</a></td>
                      <td><a class="btn btn-outline-danger nav-link excluir" href="view/php/novo-contrato.php" data-fucao="id=<?php echo $inscricao->idContrato ?>&function=excluirContrato" title="Excluir">Excluir</a></td>
                   </tr>
                <?php endwhile; ?>
