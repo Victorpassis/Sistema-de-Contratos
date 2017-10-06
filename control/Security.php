@@ -6,16 +6,10 @@ abstract class Security {
       }
    }
    static function checkLogin() {
-      if( isset( $_SESSION['usuario']) &&  isset($_SESSION['senha'])) {
+      if( isset( $_SESSION['usuario']) &&  isset($_SESSION['senha']) &&  isset($_SESSION['id'])) {
          return true;
       }  else {
          return false;
-      }
-   }
-   static function checkPage() {
-      if (!isset($_GET["option"])) {
-         header('Location: ../index.php');
-         exit;
       }
    }
 }
